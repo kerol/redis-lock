@@ -1,7 +1,6 @@
 ### redis-lock
-Inplementation of distributed locking with [Redis](https://redis.io)
-`Topic`:
-https://redis.io/topics/distlock
+Implementation of distributed locking with [Redis](https://redis.io)
+[Topic Link](https://redis.io/topics/distlock)
 
 ### Usage
 ```
