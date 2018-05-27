@@ -19,7 +19,13 @@ from redlock_dist import RedLock
 
 rds = StrictRedis(host='localhost', port=6379, db=0)
 
-with RedLock(rds, 'key-name') as red_lock:
+"""
+:param expire: lock key ttl(ms)
+:param retry_times: retry times to get lock
+:param retry_interval: retry interval(ms)
+"""
+with RedLock(rds, 'key-name', expires=30000, retry_times=3, retry_interval=50) as red_lock:
+
     if red_lock:
         print('get lock')
     else:
