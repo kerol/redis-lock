@@ -1,15 +1,24 @@
-### redis-lock
+### redlock-dist
 Implementation of distributed locking with [Redis](https://redis.io)
 
-[Topic Link](https://redis.io/topics/distlock)
+[Distributed locks with Redis](https://redis.io/topics/distlock)
 
 ### Usage
+Install:
+
+```
+pip install redlock-dist
+```
+
+example:
+
 ```
 
 from redis import StrictRedis
-from redlock import RedLock
+from redlock_dist import RedLock
 
 rds = StrictRedis(host='localhost', port=6379, db=0)
+
 with RedLock(rds, 'key-name') as red_lock:
     if red_lock:
         print('get lock')
