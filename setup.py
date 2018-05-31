@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="redlock-dist",
-    version="1.0.0",
+    version="1.0.1",
     author="kerol",
     author_email="ikerol@163.com",
     description="Distributed locks with Redis",
